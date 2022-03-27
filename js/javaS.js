@@ -1,9 +1,9 @@
-// document.addEventListener(
-//     "DOMContentLoaded", 
-//     function() {
-//         document.getElementById("formulario").addEventListener('submit', validarFormulario); 
-//     }
-// );
+document.addEventListener(
+    "DOMContentLoaded", 
+    function() {
+        document.getElementById("formulario").addEventListener('submit', validarFormulario); 
+    }
+);
     
 function validarFormulario(evento) {
     evento.preventDefault();
@@ -58,14 +58,4 @@ function showList() {
     m_registro.style.display = "none";
     _listado.style.display = "block";
     
-}
-
-const fetchEstados = () => {
-    const url = `https://github.com/martinciscap/json-estados-municipios-mexico/blob/master/estados-municipios.json`;   
-    fetch(url).then((res) => {//lo que el servidor(mediante fetch(url)) devuelva se metera en res
-        // console.log(res);        
-        return res.json();           
-    }).then((data) => {//lo que devolvio la funcion es aun una promesa, por lo que aqui obtenemos los datos deunavez como un objeto
-        alert(data);        
-    })
 }
