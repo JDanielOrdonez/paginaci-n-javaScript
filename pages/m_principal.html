@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Ejemplo</title>
+    <link rel="stylesheet" type="text/css" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">              
+</head>
+<body>
+<main class="container">    
+    <header class="row titulo">
+        <div class="col-lg-12 formulario">
+            <h1>Menú principal</h1>
+        </div>
+    </header>
+    <section class="row">
+        <nav class="col-lg-3 col-md-3 col-sm-3 pl-0 pr-0 modulo">
+            <a id="nuevo_registro" class="click">Nuevos registros</a>                   
+            <a id="modulo_registro" class="click">Modulo de registro</a>
+            <a id="list" class="click">Listado</a>
+        </nav>       
+        <div class="col-lg-9 col-md-9 col-sm-9 contenido">
+            <div class="n_registro click" id="n_registro">
+                <p class="nuevo_registro" id="nuevo_registro">
+                    <h3 class="text-center">Nuevo registro</h3>
+                    <form id="formulario"><!--action="insert.php" method="post"--> 
+                        <label for="nombre">Nombre</label>
+                        <input id="nombre" type="text" class="form-control mb-2" name="nombre" placeholder="Nombre">
+                        <label for="ap">Apellidos</label>
+                        <input id="ap" type="text" class="form-control mb-2" name="apellido" placeholder="Apellidos">
+                        <label for="curp">Curp</label>
+                        <input id="curp" type="text" class="form-control mb-2" name="curp" placeholder="Curp">
+                        <label for="edad">Edad</label>
+                        <input id="edad" type="text" class="form-control mb-2" name="edad" placeholder="Edad">
+                        <label for="genero" class="mb-2">Genero</label>
+                        <select id="genero" class="form-control">
+                            <option value="">Hombre</option>
+                            <option value="">Mujer</option>                            
+                        </select>
+                        <label for="mpio" class="mt-2">Municipio</label>
+                        <select id="mpio" class="form-control">
+                            <option value="">Pichucalco</option>
+                            <option value="">Ixtacomitan</option>  
+                            <option value="">Juarez</option>                           
+                        </select>                                                     
+                        <div class="col-md-3 m-auto">
+                            <input type="submit" id="btn" class="btn btn-primary mt-4 pl-5 pr-5" onclick="fetchEstados()" value="Guardar">
+                        </div>                      
+                    </form>           
+                </p>
+            </div>
+            <div class="m_registro" id="m_registro">
+                <p class="modulo_registro">
+                    <h3>Modulo registro</h3>
+                    <table class="table table-bordered table-hover table-responsive-lg mt-3"><!--clases para ponerle diseño automatico a las tablas-->
+                        <thead>                    
+                            <tr>
+                                <th>Nombre</th>                   
+                                <th>Apellidos</th>
+                                <th>Edad</th>
+                                <th>Genero</th>
+                                <th>Municipio</th>                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="table-success">
+                                <td>Carlos Daniel</td>
+                                <td>Acosta Guzman</td>
+                                <td>22</td>
+                                <td>Hombre</td>
+                                <td>Ixtacomitan</td>                                
+                            </tr>
+                            <tr>
+                                <td>Jesús Daniel</td>
+                                <td>Dominguez Ordoñez</td>
+                                <td>21</td>
+                                <td>Hombre</td>
+                                <td>Pichucalco</td>                                
+                            </tr>
+                            <tr class="table-success">  
+                                <td>Ximena</td>
+                                <td>Urquin Cantoral</td>
+                                <td>22</td>
+                                <td>Mujer</td>
+                                <td>Juarez</td>                             
+                            </tr>
+                            <tr>
+                                <td>Wendi Paola</td>
+                                <td>Urquin Ordoñez</td>
+                                <td>21</td>
+                                <td>Mujer</td>
+                                <td>Rayón</td>                                
+                            </tr>
+                        </tbody>
+                    </table>               
+                </p>
+            </div>
+            <div class="_listado" id="_listado">
+                <p class="listado">
+                    <h3>usuarios inscritos</h3>
+                    <ul>
+                        <li>Carlos Daniel Acosta Guzman</li>
+                        <li>Jesús Daniel Dominguez Ordoñez</li>
+                        <li>Ximena Urquin Cantoral</li>
+                        <li>Wendi Paola Urquin Ordoñez</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </section>
+    
+</main>
+
+    <script type="text/javascript" src="js/jquery.slim.min.js"></script>
+    <script src="../js/javaS.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>
