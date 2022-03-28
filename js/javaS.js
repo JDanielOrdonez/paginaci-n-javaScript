@@ -10,8 +10,13 @@ function validarFormulario(evento) {
     let usuario = document.getElementById('cuenta').value;
     let clave = document.getElementById('pass').value;
     let error = document.getElementById('error');
-    if(!usuario & !clave) {        
-        error.style.display = "flex";
+    let errorPass = document.getElementById('errorPass');
+    if(usuario.length == 0) {             
+        error.style.display = "block";
+        return;
+    }
+    if (clave.length == 0) {
+        errorPass.style.display = "block";
         return;
     }
 this.submit();
